@@ -27,8 +27,8 @@
 <meta property="og:site_name" content="Notes on Economic Papers">
 <meta property="og:description" content="I am currently a Ph.D. candidate in Economics at University of Southern California. My research interests are Microeconomic Theory and Industrial Organizations. Please visit my Google site for more">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-06T07:09:12.476Z">
-<meta property="article:modified_time" content="2020-06-06T07:09:12.476Z">
+<meta property="article:published_time" content="2020-06-10T05:31:08.644Z">
+<meta property="article:modified_time" content="2020-06-10T05:31:08.644Z">
 <meta property="article:author" content="Yejia Xu">
 <meta name="twitter:card" content="summary">
 
@@ -183,7 +183,7 @@
 <p>My research interests are Microeconomic Theory and Industrial Organizations.</p>
 <p>Please visit <a href="https://sites.google.com/view/yejiaxu/" target="_blank" rel="noopener">my Google site</a> for more on my recent research.</p>
 <p>I also write a lot (in Chinese) on popular science for Economics on <a href="https://www.zhihu.com/people/richard-xu-25" target="_blank" rel="noopener">Zhihu</a>, a Chinese version of Quora, and on more general topics on <a href="https://sx349.github.io" target="_blank" rel="noopener">my blog</a>.</p>
-<p>This website gathers my notes on Economic papers I found interesting.</p>
+<p>This website gathers my notes on Economic papers I find interesting.</p>
 <p>Feel free to leave a comment!</p>
 
       </div>
@@ -267,7 +267,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/econ-notes/tags/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -353,6 +353,59 @@
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
